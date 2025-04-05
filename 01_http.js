@@ -6,8 +6,7 @@ const server = http.createServer((req, res) => {
     if (req.url == '/') {
         const currentDateTime = new Date();
         const responseObject = {
-            date: currentDateTime.toISOString(),
-            message: 'Current date and time'
+            date: currentDateTime.toISOString()
         };
         res.writeHead(200);
         res.end(JSON.stringify(responseObject));
